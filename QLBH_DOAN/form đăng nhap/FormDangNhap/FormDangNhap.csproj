@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1C8EC233-57D8-490C-9075-25E43775D778}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FormDangNhap</RootNamespace>
+    <AssemblyName>FormDangNhap</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BH\ChatLieu.cs" />
+    <Compile Include="BH\ChiTietHDBan.cs" />
+    <Compile Include="BH\HangHoa.cs" />
+    <Compile Include="BH\HoaDonBan.cs" />
+    <Compile Include="BH\KhachHang.cs" />
+    <Compile Include="BH\NhanVien.cs" />
+    <Compile Include="BH\ShopContextDB.cs" />
+    <Compile Include="CHATLIEU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CHATLIEU.Designer.cs">
+      <DependentUpon>CHATLIEU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CT_HOADONBAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CT_HOADONBAN.Designer.cs">
+      <DependentUpon>CT_HOADONBAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DanhSachCacTaiKhoan.cs" />
+    <Compile Include="FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formMain.Designer.cs">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HANGHOA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HANGHOA.Designer.cs">
+      <DependentUpon>HANGHOA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HOADONBAN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HOADONBAN.Designer.cs">
+      <DependentUpon>HOADONBAN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KHACHHANG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KHACHHANG.Designer.cs">
+      <DependentUpon>KHACHHANG.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LIENHE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LIENHE.Designer.cs">
+      <DependentUpon>LIENHE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSreplication_options.cs" />
+    <Compile Include="NHANVIEN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NHANVIEN.Designer.cs">
+      <DependentUpon>NHANVIEN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="spt_fallback_db.cs" />
+    <Compile Include="spt_fallback_dev.cs" />
+    <Compile Include="spt_fallback_usg.cs" />
+    <Compile Include="spt_monitor.cs" />
+    <Compile Include="spt_values.cs" />
+    <Compile Include="taikhoan.cs" />
+    <EmbeddedResource Include="CHATLIEU.resx">
+      <DependentUpon>CHATLIEU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CT_HOADONBAN.resx">
+      <DependentUpon>CT_HOADONBAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formMain.resx">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formMain.vi-VN.resx">
+      <DependentUpon>formMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HANGHOA.resx">
+      <DependentUpon>HANGHOA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HOADONBAN.resx">
+      <DependentUpon>HOADONBAN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KHACHHANG.resx">
+      <DependentUpon>KHACHHANG.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LIENHE.resx">
+      <DependentUpon>LIENHE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NHANVIEN.resx">
+      <DependentUpon>NHANVIEN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tải xuống.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tải xuống1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tải xuống2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\giohang.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quan ao 1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quan ao 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image quan ao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo qao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bach  rao.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dangnhap1.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ky-nang-ban-hang-online-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\người-dùng.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inf user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inf user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\túi-hàng.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shop1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Giao Hàng.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Thương Hiệu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chuyen-tu-co-so-2-sang-co-so-16-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tải xuống.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-employee-icon-vector-illustration-in-glyph-style-for-any-purpose-png-image_998315.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-invoice-icon-design-vector-png-image_1586820.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-exit-line-icon-vectors-png-image_1737863.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\70317.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tải xuống.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-meb-cute-cartoon-icon-material-is-commercially-available-cute-cartoon-icon-png-image_4026048.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\kisspng-faculty-clip-art-staff-icon-5b5c6243700af9.9248638215327811234589.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5b97d164cf34a92436848649208c72fc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\251162648_427317678929201_6878960086538647948_n.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\251162648_427317678929201_6878960086538647948_n1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

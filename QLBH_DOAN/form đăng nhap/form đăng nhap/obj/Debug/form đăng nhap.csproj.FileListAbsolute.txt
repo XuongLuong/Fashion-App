@@ -1,0 +1,6 @@
+c:\users\mb\documents\visual studio 2013\Projects\form đăng nhap\form đăng nhap\bin\Debug\form đăng nhap.exe.config
+c:\users\mb\documents\visual studio 2013\Projects\form đăng nhap\form đăng nhap\bin\Debug\form đăng nhap.exe
+c:\users\mb\documents\visual studio 2013\Projects\form đăng nhap\form đăng nhap\bin\Debug\form đăng nhap.pdb
+c:\users\mb\documents\visual studio 2013\Projects\form đăng nhap\form đăng nhap\obj\Debug\form đăng nhap.csprojResolveAssemblyReference.cache
+c:\users\mb\documents\visual studio 2013\Projects\form đăng nhap\form đăng nhap\obj\Debug\form đăng nhap.exe
+c:\users\mb\documents\visual studio 2013\Projects\form đăng nhap\form đăng nhap\obj\Debug\form đăng nhap.pdb
